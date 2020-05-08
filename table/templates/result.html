@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    
+    <table style="width:100%">
+        {% for item in val %}
+        <tr>
+            {% for i in item %}
+            <td>{{i}}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+
+        </table>
+
+    </body>
+    </html>
