@@ -19,10 +19,9 @@
     <table style="width:100%">
         
     {% for i in ans %}
-        {% if i|divisibleby:"7" or forloop.last %}
+        
+        {% if i|divisibleby:"8" or forloop.last %}
             </tr>
-        {% endif %}
-        {% if i|divisibleby:"7" or forloop.first %}
             <tr>
         {% endif %}
         {% if i|divisibleby:"2"%}

@@ -13,11 +13,9 @@ def tab(request):
     ans =  list()
     col = list()
 
-    for i in range(1, (val - 1)):
-        if (i % 2 == 0):
+    for i in range(0, (val - 1)):
             ans.append(i)
-    for i in range(6):
-        col.append(i)
+    
     '''ans =  list()
     ans1 = list()
     ans2 = list()
@@ -36,4 +34,4 @@ def tab(request):
     ans2.append(ans1)
 
     return render(request, 'result.html', {'val': ans2})'''
-    return render(request, 'result.html', {'ans': ans, 'col' : col})
+    return render(request, 'result.html', {'ans': ans, 'col' : 6})
