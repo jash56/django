@@ -16,15 +16,15 @@
 <body>
     
     <table style="width:100%">
-        {% for item in val %}
+        
+        {% for i in ans %}
         <tr>
-            {% for i in item %}
+            {% if i/5 is not int %}
             <td>{{i}}</td>
             {% endfor %}
-            </tr>
+        </tr>
         {% endfor %}
-
-        </table>
+    </table>
 
     </body>
     </html>

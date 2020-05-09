@@ -1,13 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django import template
 
-# Create your views here.
+register = template.Library()
+
 
 def home(request):
     return render(request, 'hello.html', {'name':'JASH'})
 
 def tab(request):
     val = int(request.GET['even'])
+    ans =  list()
+
+    for i in range(1, (val - 1)):
+        if (i % 2 == 0):
+            ans.append(i)
     '''ans =  list()
     ans1 = list()
     ans2 = list()
@@ -26,4 +33,4 @@ def tab(request):
     ans2.append(ans1)
 
     return render(request, 'result.html', {'val': ans2})'''
-    return render(request, 'result.html', {'val': val})
+    return render(request, 'result.html', {'ans': ans})
